@@ -10,17 +10,24 @@ js = Technology.create(name: "JavaScript")
 ruby   = Technology.create(name: "Ruby")
 python = Technology.create(name: "Python")
 
-a = Rating.create(project_id: 1, technology_id: 4, usage: 84.7)
-b = Rating.create(project_id: 1, technology_id: 2, usage: 12.4)
-c = Rating.create(project_id: 1, technology_id: 3, usage: 1.8)
-d = Rating.create(project_id: 1, technology_id: 1, usage: 1.1)
+a = ProjectTechnology.create(project_id: 1, technology_id: 4)
+b = ProjectTechnology.create(project_id: 1, technology_id: 2)
+c = ProjectTechnology.create(project_id: 1, technology_id: 3)
+d = ProjectTechnology.create(project_id: 1, technology_id: 1)
 
-e = Rating.create(project_id: 2, technology_id: 5, usage: 61.3)
-f = Rating.create(project_id: 2, technology_id: 2, usage: 36.4)
-g = Rating.create(project_id: 2, technology_id: 1, usage: 2.3)
+e = ProjectTechnology.create(project_id: 2, technology_id: 5)
+f = ProjectTechnology.create(project_id: 2, technology_id: 2)
+g = ProjectTechnology.create(project_id: 2, technology_id: 1)
 
-h = Rating.create(project_id: 3, technology_id: 4, usage: 77.3)
-i = Rating.create(project_id: 3, technology_id: 2, usage: 17.1)
-j = Rating.create(project_id: 3, technology_id: 3, usage: 3.5)
-k = Rating.create(project_id: 3, technology_id: 1, usage: 2.1)
+h = ProjectTechnology.create(project_id: 3, technology_id: 4)
+i = ProjectTechnology.create(project_id: 3, technology_id: 2)
+j = ProjectTechnology.create(project_id: 3, technology_id: 3)
+k = ProjectTechnology.create(project_id: 3, technology_id: 1)
+
+l = Rating.create(project_technology_id: 1, rating: 50)
+m = Rating.create(project_technology_id: 2, rating: 25)
+n = Rating.create(project_technology_id: 3, rating: 15)
+o = Rating.create(project_technology_id: 4, rating: 10)
+
+
 

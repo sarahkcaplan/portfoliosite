@@ -10,10 +10,19 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20171126231600) do
+ActiveRecord::Schema.define(version: 20171127175950) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
+
+  create_table "project_technologies", force: :cascade do |t|
+    t.bigint "technology_id"
+    t.bigint "project_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["project_id"], name: "index_project_technologies_on_project_id"
+    t.index ["technology_id"], name: "index_project_technologies_on_technology_id"
+  end
 
   create_table "projects", force: :cascade do |t|
     t.string "title"
@@ -26,13 +35,11 @@ ActiveRecord::Schema.define(version: 20171126231600) do
   end
 
   create_table "ratings", force: :cascade do |t|
-    t.bigint "project_id"
-    t.bigint "technology_id"
-    t.decimal "usage"
+    t.bigint "project_technology_id"
+    t.integer "rating"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.index ["project_id"], name: "index_ratings_on_project_id"
-    t.index ["technology_id"], name: "index_ratings_on_technology_id"
+    t.index ["project_technology_id"], name: "index_ratings_on_project_technology_id"
   end
 
   create_table "technologies", force: :cascade do |t|
