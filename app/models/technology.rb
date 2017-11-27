@@ -1,6 +1,6 @@
 class Technology < ApplicationRecord
 
-  has_many :projects, through: :ratings
-  has_many :ratings
+  has_many :project_technologies
+  has_many :ratings, through: :project_technologies
 
 end

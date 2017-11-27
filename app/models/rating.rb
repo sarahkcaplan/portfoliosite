@@ -1,6 +1,5 @@
 class Rating < ApplicationRecord
 
-  belongs_to :technology
-  belongs_to :project
+  belongs_to :project_technology
 
 end
