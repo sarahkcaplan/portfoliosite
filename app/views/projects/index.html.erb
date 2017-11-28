@@ -1,7 +1,11 @@
 <h1>Projects Index<h1>
 
+<% @technologies.each do |technology| %>
+  <p> <%= technology.name %> </p>
+<% end %>
+
   <% @projects.each do |project| %>
     <ul>
-      <li> <%= link_to project.title, project %> </li>
+      <li> <%= link_to project.title, project, remote: true %> </li>
     </ul>
   <% end %>
