@@ -1,15 +1,7 @@
-@font-face {
-  font-family: "Poppins";
-  src: local(Poppins Regular), url("../fonts/Poppins/Poppins-Regular.ttf");
-  font-weight: 300;
-}
-
-@font-face {
-  font-family: "Poppins";
-  src: local(Poppins Light), url("../fonts/Poppins/Poppins-Light.ttf");
-}
-
 html {
-  font-family: "Poppins", sans-serif;
+  font-family: 'Poppins', 'Roboto', GillSans, Calibri, Trebuchet, sans-serif;
 }
 
+.main-color {
+  background-color: #FC7A7A;
+}

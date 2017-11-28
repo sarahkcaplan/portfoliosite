@@ -1,7 +1,7 @@
-<h1>Projects Index<h1>
+<h1>Portfolio<h1>
 
 <% @technologies.each do |technology| %>
-  <p> <%= technology.name %> </p>
+  <a class="waves-effect waves-light btn main-color"> <%= technology.name %> </a>
 <% end %>
 
   <% @projects.each do |project| %>
