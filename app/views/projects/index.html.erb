@@ -1,11 +1,25 @@
-<h1>Projects Index<h1>
-
-<% @technologies.each do |technology| %>
-  <p> <%= technology.name %> </p>
-<% end %>
-
-  <% @projects.each do |project| %>
-    <ul>
-      <li> <%= link_to project.title, project, remote: true %> </li>
-    </ul>
-  <% end %>
+<div class="container">
+  <div class="page-title">
+    <h1 class="center-align">Portfolio<h1>
+  </div>
+  <div class="row">
+    <div class="col s12 center-align" >
+      <% @technologies.each do |technology| %>
+        <a class="waves-effect waves-light btn main-color"> <%= technology.name %> </a>
+      <% end %>
+    </div>
+  </div>
+  <div class="row">
+    <% @projects.each do |project| %>
+      <ul>
+        <div class="col s1 m6">
+          <div class="card small blue-grey darken-1 z-depth-1">
+            <div class="card-content white-text">
+              <li> <%= project.title %></li>
+            </div>
+          </div>
+        </div>
+      </ul>
+    <% end %>
+  </div>
+</div>
