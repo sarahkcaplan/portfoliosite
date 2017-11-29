@@ -5,3 +5,12 @@ html {
 .main-color {
   background-color: #FC7A7A;
 }
+
+.page-title {
+  padding-top: 1.5cm;
+  padding-bottom: 3cm;
+}
+
+.card {
+  width: 400px;
+}
